@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Flights View</title>
+</head>
+<body>
+
+<h2>Flights</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Departure Airport Code</th>
+        <th>Destination Airport Code</th>
+        <th>Departure Time</th>
+        <th>Property1</th>
+        <th>Property2</th>
+        <!-- Add more columns based on your Flight entity -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="flight : ${flightList}">
+        <td th:text="${flight.id}"></td>
+        <td th:text="${flight.departureAirportCode}"></td>
+        <td th:text="${flight.destinationAirportCode}"></td>
+        <td th:text="${flight.departureTime}"></td>
+        <td th:text="${flight.property1}"></td>
+        <td th:text="${flight.property2}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

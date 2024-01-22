@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Airports View</title>
+</head>
+<body>
+
+<h2>Airports</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>City</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Property1</th>
+        <th>Property2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="airport : ${airportList}">
+        <td th:text="${airport.code}"></td>
+        <td th:text="${airport.name}"></td>
+        <td th:text="${airport.country}"></td>
+        <td th:text="${airport.city}"></td>
+        <td th:text="${airport.latitude}"></td>
+        <td th:text="${airport.longitude}"></td>
+        <td th:text="${airport.property1}"></td>
+        <td th:text="${airport.property2}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

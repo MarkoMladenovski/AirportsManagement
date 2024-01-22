@@ -1,0 +1,1 @@
+airportFlightService.readFlightsFromCSV(loadFile("flights.csv"));
