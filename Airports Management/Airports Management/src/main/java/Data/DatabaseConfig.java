@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "your.package.name.repository")
+@EnableJpaRepositories(basePackages = "java.repository")
 public class DatabaseConfig {
 
     @Value("${spring.datasource.url}")
